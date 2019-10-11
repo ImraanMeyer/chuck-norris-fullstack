@@ -33,16 +33,30 @@ div>li:nth-of-type(2) {
     justify-content: center;
 }
 
+button {
+    font-family: inherit;
+    text-transform: uppercase;
+    background: #aaa2b1;
+    width: 10em;
+    height: 2.7em;
+    color: #fff;
+    border-radius: 2.7em;
+    border: none;
+    font-weight: 800;
+    font-size: initial;
+    outline: 0px 0px 0px 7px #b6b6b675;
+    transition: .2s ease-out;
+}
+
 button:hover {
-    box-shadow: 0 0 0 9px #bb97558c;
+    transition: .2s ease-in;
+    box-shadow: 0 0 0 9px #b6b6b675;
     cursor: pointer;
-    transition: 300ms ease-in, box-shadow, 300ms ease-out;
 }
 
 button:active {
-    box-shadow: 0 0 0 6px #bb9755;
-    background: #bb97558c;
-    color: #696969;
+    box-shadow: 0 0 0 6px #aaa2b175;
+    background: #b6b6b6;
 }
 
 button:focus {
