@@ -2,15 +2,19 @@
     box-sizing: border-box;
 }
 
+body {
+    background: #cccccc;
+}
+
 .jokes {
     color: #fff;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     align-items: center;
     grid-gap: 1em;
 }
 
 .jokes>div {
+    margin: 1em;
     width: 300px;
     height: fit-content;
     background: #afa2a2;
@@ -94,7 +98,7 @@ nav>h4 {
     }
     .jokes {
         margin: 1em auto;
-        grid-template-columns: 1fr !important;
+        flex-direction: column !important;
     }
     h4 {
         width: 100%;

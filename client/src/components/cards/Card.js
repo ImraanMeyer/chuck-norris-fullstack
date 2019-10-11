@@ -4,7 +4,7 @@ const Card = ({joke}) => {
     return (
         <> 
             {Object.values(joke).map(lol => (
-                <div className="jokes">  
+                <div key={lol['id']} className="jokes">  
                     <li>Joke No: {lol['id']}</li>
                     <li>{lol['joke']}</li>
                 </div>
