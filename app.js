@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const path = require('path')
+const path = require('path');
 const helmet = require('helmet');
 const fetch = require('node-fetch');
 const bodyParser = require("body-parser");
@@ -19,17 +19,17 @@ app.get('/api', (req, res) => {
     fetch('http://api.icndb.com/jokes/random/3')
         .then(res => res.json())
         .then(data => res.send(data))
+        .catch(err => console.log(err))
 })
 
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static('client/build'));
     // Handle React routing, return all requests to React app
-    app.get('/', function(req, res) {
+    app.get('*', (req, res) => {
         res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
     });
 }
-
 
 // Establish Port
 const PORT = process.env.PORT || 5050;
