@@ -5,7 +5,6 @@ const helmet = require('helmet');
 const fetch = require('node-fetch');
 const bodyParser = require("body-parser");
 
-
 const app = express();
 
 // Body Parser
