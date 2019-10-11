@@ -1,0 +1,21 @@
+{
+    "name": "chuck-norris-jokes",
+    "version": "1.0.0",
+    "description": "Get Chuck Norris jokes through API",
+    "main": "app.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    },
+    "author": "Imraan Meyer",
+    "license": "ISC",
+    "dependencies": {
+        "axios": "^0.19.0",
+        "cors": "^2.8.5",
+        "express": "^4.17.1",
+        "helmet": "^3.21.1",
+        "node-fetch": "^2.6.0",
+        "nodemon": "^1.19.3"
+    }
+}
