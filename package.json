@@ -4,10 +4,10 @@
     "description": "Get Chuck Norris jokes through API",
     "main": "app.js",
     "scripts": {
-        "server": "nodemon app.js",
+        "start": "nodemon app.js",
         "client": "npm start --prefix client",
         "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-        "concurrently": "concurrently \"npm run server\" \"npm run client\""
+        "concurrently": "concurrently \"npm start\" \"npm run client\""
     },
     "author": "Imraan Meyer",
     "license": "ISC",
