@@ -24,7 +24,6 @@ const App = () => {
     getJokes();
   }, [setHits])
 
-
   return (
     <div>
       <Head getJokes={getJokes} />
