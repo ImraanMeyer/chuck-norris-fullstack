@@ -96,11 +96,12 @@ nav button {
   margin-top: 2em; }
   .theme-selector button {
     height: 2em;
-    font-size: larger;
+    font-size: x-large;
     width: 2em;
     border: none;
     background-color: #aaa2b1;
-    border-radius: 50%; }
+    border-radius: 50%;
+    cursor: pointer; }
     .theme-selector button:focus {
       outline: none !important; }
 
