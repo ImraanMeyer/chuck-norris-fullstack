@@ -4,6 +4,7 @@ import './App.css'
 // Component Imports
 import Head from './components/Head';
 import Cards from './components/cards/Cards';
+import ThemeToggle from './components/ThemeToggle';
 
 
 const App = () => {
@@ -20,6 +21,9 @@ const App = () => {
     return setHits([body['value']]);
   }
 
+  // .env.dev
+  // HOST=name.herokuapp.com
+
   useEffect(() => {
     getJokes();
   }, [setHits])
@@ -27,6 +31,7 @@ const App = () => {
   return (
     <div>
       <Head getJokes={getJokes} />
+      <ThemeToggle/>
         <div style={{ display: 'flex', alignItems: 'center', height: '80vh', justifyContent: 'center' }}>
           {hits === null ? (<h3>Loading...</h3>) : (
             <Cards hits={hits} />

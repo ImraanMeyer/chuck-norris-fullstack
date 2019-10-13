@@ -7,7 +7,8 @@
         "start": "nodemon app.js",
         "client": "npm start --prefix client",
         "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
-        "concurrently": "concurrently \"npm start\" \"npm run client\""
+        "concurrently": "concurrently \"npm start\" \"npm run client\"",
+        "sass": "cd client/src && sass --watch App.scss:App.css"
     },
     "author": "Imraan Meyer",
     "license": "ISC",

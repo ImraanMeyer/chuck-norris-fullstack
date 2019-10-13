@@ -15,6 +15,7 @@ app.use(bodyParser.json());
 app.use(cors());
 app.use(helmet());
 
+// Client frontend
 app.get('/api', (req, res) => {
     fetch('http://api.icndb.com/jokes/random/3')
         .then(res => res.json())
@@ -22,6 +23,8 @@ app.get('/api', (req, res) => {
         .catch(err => console.log(err))
 })
 
+
+// Production Mode Serve
 if (process.env.NODE_ENV === 'production') {
     // Serve any static files
     app.use(express.static('client/build'));
